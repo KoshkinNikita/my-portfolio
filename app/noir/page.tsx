@@ -5,11 +5,18 @@ import BookingForm from "./BookingForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL(
+    "https://my-portfolio-xi-eight-eeoekutlpw.vercel.app"
+  ),
+
   title: "NOIR — Barbershop Kazan",
+
   description:
     "NOIR — премиальный барбершоп в Казани. Стрижки, оформление бороды и полный уход за образом.",
 
+  alternates: {
+    canonical: "/noir",
+  },
   keywords: [
     "барбершоп Казань",
     "мужская стрижка Казань",
