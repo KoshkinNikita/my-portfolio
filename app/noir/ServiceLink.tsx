@@ -14,14 +14,11 @@ export default function ServiceLink({
   description,
 }: ServiceLinkProps) {
   const handleClick = () => {
-    const select = document.querySelector<HTMLSelectElement>(
-      "#booking-service"
+    window.dispatchEvent(
+      new CustomEvent("noir-service-select", {
+        detail: serviceValue,
+      })
     );
-
-    if (select) {
-      select.value = serviceValue;
-      select.dispatchEvent(new Event("change", { bubbles: true }));
-    }
 
     document.querySelector("#booking")?.scrollIntoView({
       behavior: "smooth",

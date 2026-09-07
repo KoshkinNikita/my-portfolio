@@ -70,13 +70,18 @@ export default function BookingForm() {
       }),
     });
 
-    const data = await response.json();
+    const responseText = await response.text();
 
-    if (!response.ok) {
-      throw new Error(
-        data.error || "Не удалось отправить заявку"
-      );
-    }
+console.log("Booking response:", {
+  status: response.status,
+  body: responseText,
+});
+
+if (!response.ok) {
+  throw new Error(
+    responseText || "Не удалось отправить заявку"
+  );
+}
 
     setIsSubmitted(true);
 

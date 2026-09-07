@@ -1,334 +1,468 @@
 import Image from "next/image";
+import Link from "next/link";
+
 export default function WarmShelterPage() {
   return (
-    <main className="min-h-screen bg-zinc-950 px-6 py-10 text-zinc-100 sm:px-12">
-      <div className="mx-auto max-w-4xl">
-        <a
-          href="/#projects"
-          className="text-sm text-zinc-400 transition hover:text-white"
-        >
-          ← Назад к проектам
-        </a>
+    <main className="min-h-screen bg-[#F1F0E9] px-5 py-6 pb-28 text-[#111111] sm:px-8 sm:py-8 sm:pb-28 lg:px-10">
+      <div className="mx-auto max-w-[1400px]">
+        {/* NAVIGATION */}
+        <nav className="flex items-center justify-between">
+          <Link
+            href="/#projects"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-[#111111]/55 transition-colors hover:text-[#1F4D3A]"
+          >
+            <span className="text-lg transition-transform duration-300 group-hover:-translate-x-1">
+              ←
+            </span>
+            Назад к проектам
+          </Link>
+        </nav>
 
-        <section className="mt-16">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-violet-400">
-            Python · FastAPI · SQL · JWT
-          </p>
+        {/* HERO */}
+        <section className="border-b border-[#111111]/15 pb-20 pt-20 sm:pb-28 sm:pt-28 lg:pt-32">
+          <div className="grid gap-12 lg:grid-cols-[1fr_0.4fr] lg:items-end lg:gap-20">
+            <div>
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#1F4D3A] sm:text-sm">
+                Python · PyQt5 · SQLite · TensorFlow
+              </p>
 
-          <h1 className="mt-4 text-5xl font-bold tracking-tight sm:text-6xl">
-            Тёплое убежище
-          </h1>
+              <h1 className="mt-7 max-w-5xl text-[clamp(4rem,9vw,9rem)] font-bold leading-[0.82] tracking-[-0.07em]">
+                Тёплое
+                <br />
+                <span className="text-[#1F4D3A]">убежище</span>
+              </h1>
+            </div>
 
-          <p className="mt-6 max-w-2xl text-xl leading-8 text-zinc-400">
-            Интеллектуальная информационная система для поддержки
-            ментального здоровья на основе методов КПТ.
-          </p>
+            <div className="max-w-md lg:pb-2">
+              <p className="text-lg leading-8 text-[#111111]/60 sm:text-xl">
+                Интеллектуальная информационная система для поддержки
+                ментального здоровья на основе методов КПТ.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 flex items-center justify-between border-t border-[#111111]/15 pt-4 text-[10px] uppercase tracking-[0.18em] text-[#111111]/35 sm:mt-20 sm:text-xs">
+            <span>01 / Проект</span>
+
+            <span className="hidden sm:block">
+              Python · Desktop · ML
+            </span>
+
+            <span>2026</span>
+          </div>
         </section>
 
-        <section className="mt-16 border-t border-zinc-800 pt-10">
-  <p className="text-sm uppercase tracking-[0.2em] text-violet-400">
-    О проекте
-  </p>
+        {/* ABOUT */}
+        <section className="border-b border-[#111111]/15 py-20 sm:py-28">
+          <div className="grid gap-12 lg:grid-cols-[280px_1fr] lg:gap-20">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-[#111111]/45">
+                О проекте
+              </p>
 
-  <h2 className="mt-3 text-3xl font-bold tracking-tight">
-    Интеллектуальная система поддержки
-  </h2>
+              <p className="mt-5 text-xs uppercase tracking-[0.16em] text-[#111111]/25">
+                01 / 05
+              </p>
+            </div>
 
-  <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-    «Тёплое убежище» — дипломный проект, представляющий собой
-    интеллектуальную информационную систему для поддержки ментального
-    здоровья на основе методов когнитивно-поведенческой терапии.
-  </p>
+            <div>
+              <h2 className="max-w-5xl text-3xl font-medium leading-[1.12] tracking-[-0.04em] sm:text-4xl lg:text-5xl">
+                Десктопное приложение, объединяющее дневник мыслей, упражнения
+                КПТ и интеллектуальный анализ эмоционального состояния.
+              </h2>
 
-  <p className="mt-4 max-w-3xl text-lg leading-8 text-zinc-400">
-    Система позволяет пользователю работать с эмоциональным состоянием,
-    фиксировать ситуации и эмоции, выполнять специализированные упражнения,
-    отслеживать динамику и получать персональные рекомендации.
-  </p>
-</section>
+              <div className="mt-10 max-w-3xl space-y-6 text-base leading-7 text-[#111111]/60 sm:text-lg sm:leading-8">
+                <p>
+                  «Тёплое убежище» — дипломный проект, разработанный как единая
+                  среда для самостоятельной работы с эмоциональным состоянием.
+                  Пользователь может фиксировать ситуации и мысли, оценивать
+                  эмоции, выполнять упражнения и отслеживать изменения своего
+                  состояния.
+                </p>
 
-<section className="mt-12 border-t border-zinc-800 pt-10">
-  <p className="text-sm uppercase tracking-[0.2em] text-violet-400">
-    Интерфейс
-  </p>
+                <p>
+                  Приложение работает в офлайн-режиме, а пользовательские данные
+                  хранятся локально в SQLite. Это позволяет использовать систему
+                  без постоянного подключения к интернету и не требует передачи
+                  записей на внешние серверы.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  <h2 className="mt-3 text-3xl font-bold tracking-tight">
-    Приложение в работе
-  </h2>
+        {/* FEATURES */}
+        <section className="border-b border-[#111111]/15 py-20 sm:py-28">
+          <div className="grid gap-12 lg:grid-cols-[280px_1fr] lg:gap-20">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-[#111111]/45">
+                Возможности
+              </p>
 
-  <div className="mt-8 space-y-6">
-    <div className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
-      <figure className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
-  <Image
-    src="/images/projects/warm-shelter/main.png"
-    alt="Главный экран приложения Тёплое убежище"
-    width={1600}
-    height={900}
-    className="h-auto w-full"
-  />
+              <p className="mt-5 text-xs uppercase tracking-[0.16em] text-[#111111]/25">
+                02 / 05
+              </p>
+            </div>
 
-  <figcaption className="border-t border-zinc-800 px-6 py-5">
-    <h3 className="font-semibold">Главный экран</h3>
-    <p className="mt-1 text-sm leading-6 text-zinc-400">
-      Мониторинг эмоционального состояния и динамики настроения пользователя.
-    </p>
-  </figcaption>
-</figure>
-    </div>
+            <div className="border-t border-[#111111]/15">
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Дневник
+                </p>
 
-    <div className="grid gap-6 md:grid-cols-2">
-      <div className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
-        <figure className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
-  <Image
-    src="/images/projects/warm-shelter/diary.png"
-    alt="Дневник мыслей в приложении Тёплое убежище"
-    width={1600}
-    height={900}
-    className="h-auto w-full"
-  />
+                <p className="text-xl tracking-[-0.02em] sm:text-2xl">
+                  Ситуации · эмоции · автоматические мысли · когнитивные
+                  искажения
+                </p>
+              </div>
 
-  <figcaption className="border-t border-zinc-800 px-6 py-5">
-    <h3 className="font-semibold">Дневник мыслей</h3>
-    <p className="mt-1 text-sm leading-6 text-zinc-400">
-      Фиксация ситуаций, эмоций и автоматических мыслей.
-    </p>
-  </figcaption>
-</figure>
-      </div>
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Упражнения
+                </p>
 
-      <div className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
-        <figure className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
-  <Image
-    src="/images/projects/warm-shelter/dnk_profile.png"
-    alt="Профиль ДНК ментального здоровья"
-    width={1600}
-    height={900}
-    className="h-auto w-full"
-  />
+                <p className="text-xl tracking-[-0.02em] sm:text-2xl">
+                  Дыхание · мышление · релаксация · осознанность
+                </p>
+              </div>
 
-  <figcaption className="border-t border-zinc-800 px-6 py-5">
-    <h3 className="font-semibold">Профиль ДНК</h3>
-    <p className="mt-1 text-sm leading-6 text-zinc-400">
-      Анализ повторяющихся паттернов мышления и эмоциональных реакций.
-    </p>
-  </figcaption>
-</figure>
-      </div>
-    </div>
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Аналитика
+                </p>
 
-    <div className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
-      <figure className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
-  <Image
-    src="/images/projects/warm-shelter/exersises.png"
-    alt="Упражнения КПТ в приложении Тёплое убежище"
-    width={1600}
-    height={900}
-    className="h-auto w-full"
-  />
+                <p className="text-xl tracking-[-0.02em] sm:text-2xl">
+                  Динамика настроения · рекомендации · анализ записей
+                </p>
+              </div>
 
-  <figcaption className="border-t border-zinc-800 px-6 py-5">
-    <h3 className="font-semibold">Упражнения КПТ</h3>
-    <p className="mt-1 text-sm leading-6 text-zinc-400">
-      Каталог практик с категориями и пошаговым выполнением упражнений.
-    </p>
-  </figcaption>
-</figure>
-    </div>
-  </div>
-</section>
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Профиль
+                </p>
 
-<section className="mt-16 border-t border-zinc-800 pt-10">
-  <p className="text-sm uppercase tracking-[0.2em] text-violet-400">
-    Архитектура
-  </p>
+                <p className="text-xl tracking-[-0.02em] sm:text-2xl">
+                  ДНК-профиль · эмоциональные паттерны · статистика
+                </p>
+              </div>
 
-  <h2 className="mt-3 text-3xl font-bold tracking-tight">
-    Как устроен проект
-  </h2>
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Дополнительно
+                </p>
 
-  <p className="mt-4 max-w-2xl leading-7 text-zinc-400">
-    Приложение построено как десктопная система с графическим интерфейсом,
-    модульной бизнес-логикой, аналитическими компонентами и локальным
-    хранением данных.
-  </p>
+                <p className="text-xl tracking-[-0.02em] sm:text-2xl">
+                  Чат-бот · достижения · экспорт данных · музыкальный плеер
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  <div className="mt-8 grid gap-4 md:grid-cols-2">
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <p className="text-sm text-violet-400">UI</p>
-      <h3 className="mt-3 text-xl font-bold">PyQt5</h3>
-      <p className="mt-2 leading-7 text-zinc-400">
-        Графический интерфейс приложения, окна и пользовательские виджеты.
-      </p>
-    </div>
+        {/* INTELLIGENT ANALYSIS */}
+        <section className="border-b border-[#111111]/15 py-20 sm:py-28">
+          <div className="grid gap-12 lg:grid-cols-[280px_1fr] lg:gap-20">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-[#111111]/45">
+                Интеллектуальный анализ
+              </p>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <p className="text-sm text-violet-400">Data</p>
-      <h3 className="mt-3 text-xl font-bold">SQLite</h3>
-      <p className="mt-2 leading-7 text-zinc-400">
-        Локальное хранение пользовательских записей и данных приложения.
-      </p>
-    </div>
+              <p className="mt-5 text-xs uppercase tracking-[0.16em] text-[#111111]/25">
+                03 / 05
+              </p>
+            </div>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <p className="text-sm text-violet-400">Analytics</p>
-      <h3 className="mt-3 text-xl font-bold">scikit-learn · TensorFlow</h3>
-      <p className="mt-2 leading-7 text-zinc-400">
-        Анализ данных и интеллектуальные компоненты системы.
-      </p>
-    </div>
+            <div>
+              <h2 className="max-w-5xl text-3xl font-medium leading-[1.12] tracking-[-0.04em] sm:text-4xl lg:text-5xl">
+                Система анализирует записи пользователя и помогает увидеть
+                закономерности в его состоянии.
+              </h2>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <p className="text-sm text-violet-400">Visualization</p>
-      <h3 className="mt-3 text-xl font-bold">Matplotlib</h3>
-      <p className="mt-2 leading-7 text-zinc-400">
-        Построение графиков и визуализация динамики эмоционального состояния.
-      </p>
-    </div>
-  </div>
-</section>
+              <div className="mt-12 border-t border-[#111111]/15">
+                <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                  <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                    Тональность
+                  </p>
 
-<section className="mt-16 border-t border-zinc-800 pt-10">
-  <p className="text-sm uppercase tracking-[0.2em] text-violet-400">
-    Возможности
-  </p>
+                  <p className="text-xl tracking-[-0.02em] sm:text-2xl">
+                    Анализ эмоциональной окраски текста
+                  </p>
+                </div>
 
-  <h2 className="mt-3 text-3xl font-bold tracking-tight">
-    Ключевая функциональность
-  </h2>
+                <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                  <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                    Похожие ситуации
+                  </p>
 
-  <p className="mt-4 max-w-2xl leading-7 text-zinc-400">
-    Основные функции системы, которые пользователь может использовать
-    для работы с эмоциональным состоянием и отслеживания личного прогресса.
-  </p>
+                  <p className="text-xl tracking-[-0.02em] sm:text-2xl">
+                    TF-IDF · косинусная близость
+                  </p>
+                </div>
 
-  <div className="mt-8 grid gap-4 md:grid-cols-2">
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <p className="text-sm text-violet-400">01</p>
-      <h3 className="mt-3 text-xl font-bold">Дневник мыслей</h3>
-      <p className="mt-2 leading-7 text-zinc-400">
-        Фиксация ситуаций, эмоций и автоматических мыслей пользователя
-        для последующего анализа.
-      </p>
-    </div>
+                <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                  <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                    Прогноз
+                  </p>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <p className="text-sm text-violet-400">02</p>
-      <h3 className="mt-3 text-xl font-bold">Упражнения КПТ</h3>
-      <p className="mt-2 leading-7 text-zinc-400">
-        Набор практик для работы с дыханием, мышлением, расслаблением
-        и осознанностью.
-      </p>
-    </div>
+                  <p className="text-xl tracking-[-0.02em] sm:text-2xl">
+                    Прогнозирование тренда настроения
+                  </p>
+                </div>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <p className="text-sm text-violet-400">03</p>
-      <h3 className="mt-3 text-xl font-bold">Аналитика состояния</h3>
-      <p className="mt-2 leading-7 text-zinc-400">
-        Визуализация динамики настроения и анализ эмоционального
-        состояния пользователя.
-      </p>
-    </div>
+                <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                  <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                    Маркеры
+                  </p>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <p className="text-sm text-violet-400">04</p>
-      <h3 className="mt-3 text-xl font-bold">Профиль ДНК</h3>
-      <p className="mt-2 leading-7 text-zinc-400">
-        Выявление повторяющихся паттернов мышления, эмоциональных реакций
-        и потенциальных триггеров.
-      </p>
-    </div>
+                  <p className="text-xl tracking-[-0.02em] sm:text-2xl">
+                    Выявление признаков кризисных состояний
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <p className="text-sm text-violet-400">05</p>
-      <h3 className="mt-3 text-xl font-bold">Система достижений</h3>
-      <p className="mt-2 leading-7 text-zinc-400">
-        Отслеживание активности пользователя, прогресса и достижений
-        в процессе работы с приложением.
-      </p>
-    </div>
+        {/* INTERFACE */}
+        <section className="border-b border-[#111111]/15 py-20 sm:py-28">
+          <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-[#111111]/45">
+                Интерфейс
+              </p>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <p className="text-sm text-violet-400">06</p>
-      <h3 className="mt-3 text-xl font-bold">Чат-бот</h3>
-      <p className="mt-2 leading-7 text-zinc-400">
-        Интерактивное взаимодействие с пользователем и эмоциональная
-        поддержка в рамках возможностей приложения.
-      </p>
-    </div>
-  </div>
-</section>
+              <p className="mt-5 text-xs uppercase tracking-[0.16em] text-[#111111]/25">
+                04 / 05
+              </p>
 
-<section className="mt-16 border-t border-zinc-800 pt-10">
-  <p className="text-sm uppercase tracking-[0.2em] text-violet-400">
-    Результат
-  </p>
+              <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-[-0.05em] sm:text-5xl lg:text-6xl">
+                Приложение в работе.
+              </h2>
+            </div>
 
-  <h2 className="mt-3 text-3xl font-bold tracking-tight">
-    Что было реализовано
-  </h2>
+            <p className="max-w-xs text-sm leading-6 text-[#111111]/50">
+              Несколько основных экранов приложения и сценариев
+              взаимодействия.
+            </p>
+          </div>
 
-  <div className="mt-8 grid gap-4 md:grid-cols-2">
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <h3 className="text-xl font-bold">
-        Полноценное desktop-приложение
-      </h3>
-      <p className="mt-3 leading-7 text-zinc-400">
-        Реализован графический интерфейс с отдельными окнами, виджетами
-        и модулями для разных сценариев взаимодействия пользователя.
-      </p>
-    </div>
+          <div className="mt-12 space-y-8 sm:mt-16 sm:space-y-12">
+            {/* Main screen */}
+            <figure className="overflow-hidden rounded-[2rem] border border-[#111111]/10 bg-[#E7E5DC]">
+              <div className="overflow-x-auto">
+                <div className="min-w-[760px] sm:min-w-0">
+                  <Image
+                    src="/images/projects/warm-shelter/main.png"
+                    alt="Главный экран приложения Тёплое убежище"
+                    width={1600}
+                    height={900}
+                    className="block h-auto w-full"
+                  />
+                </div>
+              </div>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <h3 className="text-xl font-bold">
-        Работа с пользовательскими данными
-      </h3>
-      <p className="mt-3 leading-7 text-zinc-400">
-        Реализовано локальное хранение записей, истории активности
-        и данных пользователя с использованием SQLite.
-      </p>
-    </div>
+              <figcaption className="border-t border-[#111111]/10 px-5 py-5 sm:px-7 sm:py-6">
+                <h3 className="text-lg font-medium tracking-[-0.02em] sm:text-xl">
+                  Главный экран
+                </h3>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <h3 className="text-xl font-bold">
-        Анализ и визуализация
-      </h3>
-      <p className="mt-3 leading-7 text-zinc-400">
-        Система анализирует накопленные данные и представляет результаты
-        в виде графиков, статистики и аналитического профиля.
-      </p>
-    </div>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-[#111111]/55 sm:text-base">
+                  Мониторинг эмоционального состояния, динамики настроения и
+                  основных показателей пользователя.
+                </p>
+              </figcaption>
+            </figure>
 
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <h3 className="text-xl font-bold">
-        Модульная структура
-      </h3>
-      <p className="mt-3 leading-7 text-zinc-400">
-        Проект разделён на отдельные компоненты интерфейса, работы
-        с данными, аналитики и вспомогательной логики.
-      </p>
-    </div>
-  </div>
+            {/* Diary + DNA */}
+            <div className="grid gap-8 md:grid-cols-2">
+              <figure className="overflow-hidden rounded-[2rem] border border-[#111111]/10 bg-[#E7E5DC]">
+                <div className="overflow-x-auto">
+                  <div className="min-w-[760px] md:min-w-0">
+                    <Image
+                      src="/images/projects/warm-shelter/diary.png"
+                      alt="Дневник мыслей в приложении Тёплое убежище"
+                      width={1600}
+                      height={900}
+                      className="block h-auto w-full"
+                    />
+                  </div>
+                </div>
 
-  <div className="mt-10 flex flex-wrap gap-4">
-    <a
-      href="https://github.com/KoshkinNikita/mental-health-app"
-      target="_blank"
-      rel="noreferrer"
-      className="rounded-full bg-violet-500 px-6 py-3 font-medium text-white transition hover:bg-violet-400"
-    >
-      Посмотреть исходный код →
-    </a>
+                <figcaption className="border-t border-[#111111]/10 px-5 py-5 sm:px-7 sm:py-6">
+                  <h3 className="text-lg font-medium tracking-[-0.02em] sm:text-xl">
+                    Дневник мыслей
+                  </h3>
 
-    <a
-      href="/#projects"
-      className="rounded-full border border-zinc-700 px-6 py-3 font-medium text-zinc-300 transition hover:border-zinc-500 hover:text-white"
-    >
-      ← Все проекты
-    </a>
-  </div>
-</section>
+                  <p className="mt-2 text-sm leading-6 text-[#111111]/55 sm:text-base">
+                    Фиксация ситуаций, эмоций и автоматических мыслей для
+                    последующего анализа.
+                  </p>
+                </figcaption>
+              </figure>
 
-        
+              <figure className="overflow-hidden rounded-[2rem] border border-[#111111]/10 bg-[#E7E5DC]">
+                <div className="overflow-x-auto">
+                  <div className="min-w-[760px] md:min-w-0">
+                    <Image
+                      src="/images/projects/warm-shelter/dnk_profile.png"
+                      alt="Профиль ДНК ментального здоровья"
+                      width={1600}
+                      height={900}
+                      className="block h-auto w-full"
+                    />
+                  </div>
+                </div>
+
+                <figcaption className="border-t border-[#111111]/10 px-5 py-5 sm:px-7 sm:py-6">
+                  <h3 className="text-lg font-medium tracking-[-0.02em] sm:text-xl">
+                    Профиль ДНК
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-6 text-[#111111]/55 sm:text-base">
+                    Анализ повторяющихся паттернов мышления и эмоциональных
+                    реакций.
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            {/* Exercises */}
+            <figure className="overflow-hidden rounded-[2rem] border border-[#111111]/10 bg-[#E7E5DC]">
+              <div className="overflow-x-auto">
+                <div className="min-w-[760px] sm:min-w-0">
+                  <Image
+                    src="/images/projects/warm-shelter/exersises.png"
+                    alt="Упражнения КПТ в приложении Тёплое убежище"
+                    width={1600}
+                    height={900}
+                    className="block h-auto w-full"
+                  />
+                </div>
+              </div>
+
+              <figcaption className="border-t border-[#111111]/10 px-5 py-5 sm:px-7 sm:py-6">
+                <h3 className="text-lg font-medium tracking-[-0.02em] sm:text-xl">
+                  Упражнения КПТ
+                </h3>
+
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-[#111111]/55 sm:text-base">
+                  Каталог практик с категориями и пошаговым выполнением
+                  упражнений.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        {/* TECHNOLOGIES */}
+        <section className="border-b border-[#111111]/15 py-20 sm:py-28">
+          <div className="grid gap-12 lg:grid-cols-[280px_1fr] lg:gap-20">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-[#111111]/45">
+                Технологии
+              </p>
+
+              <p className="mt-5 text-xs uppercase tracking-[0.16em] text-[#111111]/25">
+                05 / 05
+              </p>
+            </div>
+
+            <div className="border-t border-[#111111]/15">
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Язык
+                </p>
+
+                <p className="text-2xl tracking-[-0.03em] sm:text-3xl">
+                  Python 3.11
+                </p>
+              </div>
+
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Интерфейс
+                </p>
+
+                <p className="text-2xl tracking-[-0.03em] sm:text-3xl">
+                  PyQt5
+                </p>
+              </div>
+
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Данные
+                </p>
+
+                <p className="text-2xl tracking-[-0.03em] sm:text-3xl">
+                  SQLite
+                </p>
+              </div>
+
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Анализ
+                </p>
+
+                <p className="text-2xl tracking-[-0.03em] sm:text-3xl">
+                  scikit-learn · TensorFlow
+                </p>
+              </div>
+
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Визуализация
+                </p>
+
+                <p className="text-2xl tracking-[-0.03em] sm:text-3xl">
+                  matplotlib
+                </p>
+              </div>
+
+              <div className="grid gap-4 border-b border-[#111111]/15 py-7 sm:grid-cols-[220px_1fr] sm:items-center sm:py-9">
+                <p className="text-xs uppercase tracking-[0.16em] text-[#1F4D3A]">
+                  Дополнительно
+                </p>
+
+                <p className="text-2xl tracking-[-0.03em] sm:text-3xl">
+                  pygame
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* GITHUB / FOOTER */}
+        <section className="py-16 sm:py-20">
+          <div className="flex flex-col gap-10 sm:flex-row sm:items-center sm:justify-between">
+            <a
+              href="https://github.com/KoshkinNikita/mental-health-app"
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-3 text-sm font-medium transition-colors hover:text-[#1F4D3A]"
+            >
+              Исходный код на GitHub
+              <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
+                ↗
+              </span>
+            </a>
+
+            <div className="flex flex-col gap-4 sm:items-end">
+              <Link
+                href="/#projects"
+                className="group inline-flex items-center gap-3 text-sm font-medium transition-colors hover:text-[#1F4D3A]"
+              >
+                <span className="text-lg transition-transform duration-300 group-hover:-translate-x-1">
+                  ←
+                </span>
+                Все проекты
+              </Link>
+
+              <span className="text-xs uppercase tracking-[0.16em] text-[#111111]/30">
+                NK. · 2026
+              </span>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );
